@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: ExtraBold;
+  src: url(Nohemi-ExtraBold.woff2);
+}
+
+@font-face {
+  font-family: SemiBold;
+  src: url(Nohemi-SemiBold.woff2);
+}
+
+@font-face {
+  font-family: Regular;
+  src: url(Nohemi-Regular.woff2);
+}
+
+/* STYLING AF TING */
