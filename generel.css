@@ -4,18 +4,98 @@
 }
 
 @font-face {
-  font-family: ExtraBold;
+  font-family: extrabold;
   src: url(Nohemi-ExtraBold.woff2);
 }
 
 @font-face {
-  font-family: SemiBold;
+  font-family: semibold;
   src: url(Nohemi-SemiBold.woff2);
 }
 
 @font-face {
-  font-family: Regular;
+  font-family: regular;
   src: url(Nohemi-Regular.woff2);
 }
 
+/* BURGERMENU */
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo_burger a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav_menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_menu li {
+  margin-right: 20px;
+}
+
+.nav_menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu_ikon,
+.luk_ikon {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Ændret position til højre */
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .nav_menu.active {
+    display: flex;
+  }
+
+  .menu_ikon {
+    display: block;
+  }
+
+  .luk_ikon {
+    display: none;
+  }
+
+  .logo_burger {
+    order: 1;
+  }
+}
 /* STYLING AF TING */
