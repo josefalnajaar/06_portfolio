@@ -1,17 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let menuIkon = document.querySelector("#menu_ikon");
-  let lukIkon = document.querySelector("#luk_ikon");
-  let navMenu = document.querySelector(".nav_menu");
+  let burgerIcon = document.getElementById("burger-icon");
+  let closeIcon = document.getElementById("close-icon");
+  let navMenu = document.querySelector("nav");
 
-  menuIkon.addEventListener("mousedown", function () {
-    navMenu.classList.toggle("active");
-    menuIkon.style.display = "none";
-    lukIkon.style.display = "block";
-  });
+  burgerIcon.addEventListener("click", toggleMenu);
+  closeIcon.addEventListener("click", toggleMenu);
+  window.addEventListener("resize", resetIconsOnResize);
 
-  lukIkon.addEventListener("mousedown", function () {
+  function toggleMenu() {
     navMenu.classList.toggle("active");
-    lukIkon.style.display = "none";
-    menuIkon.style.display = "block";
-  });
+
+    if (burgerIcon.style.display === "none") {
+      burgerIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    } else {
+      burgerIcon.style.display = "none";
+      closeIcon.style.display = "block";
+    }
+  }
+
+  function resetIconsOnResize() {
+    if (window.innerWidth > 768) {
+      burgerIcon.style.display = "none";
+      closeIcon.style.display = "none";
+    } else {
+      burgerIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }
+  }
 });
