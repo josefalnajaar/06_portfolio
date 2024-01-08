@@ -193,6 +193,12 @@ nav a:hover {
     display: none;
   }
 
+  /* OVERSKRIFT MOBILE */
+
+  .tema_navn h1 {
+    text-align: center;
+  }
+
   /* WIREFRAMES */
 
   .wireframes_billeder {
@@ -296,8 +302,7 @@ nav a:hover {
   }
 
   /* KLIK VIDERE */
-  .klik_videre_link {
-    background-color: #9a341f;
+  .klik_videre {
     display: inline-block;
     padding: 12px;
     padding-right: 18px;
@@ -306,12 +311,28 @@ nav a:hover {
     margin-bottom: 20px;
     text-decoration: none;
   }
-  .klik_videre_link a {
+  .klik_videre a {
     text-decoration: none;
   }
 
-  .klik_videre_link h2:hover {
-    color: #ed7158;
+  .klik_videre h2:hover {
+    mix-blend-mode: soft-light;
+  }
+
+  .klik_videre.tema2 {
+    background-color: #9a341f;
+  }
+
+  .klik_videre.tema3 {
+    background-color: #3956ca;
+  }
+
+  .klik_videre.tema4 {
+    background-color: #e8aa3e;
+  }
+
+  .klik_videre.tema5 {
+    background-color: #4b9136;
   }
 }
 @media (min-width: 770px) {
