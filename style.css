@@ -1,1 +1,25 @@
 /* GRID OG FLEX */
+.tema {
+  display: flex;
+  flex-direction: column;
+}
+
+.tema img {
+  width: 100%;
+}
+
+.tema_navn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.klik_videre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}

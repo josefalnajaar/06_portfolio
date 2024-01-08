@@ -22,7 +22,19 @@ body {
   background-color: #191919;
 }
 
-/* BURGERMENU */
+h1,
+h2,
+h3,
+p {
+  color: white;
+  font-family: regular;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* GENEREL MENU */
 header {
   display: flex;
   justify-content: space-between;
@@ -74,6 +86,13 @@ nav a:hover {
 }
 
 @media (max-width: 770px) {
+  /* GENEREL MOBILE */
+  main {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  /* BURGERMENU */
   .logo {
     order: 2;
     text-align: center;
@@ -130,9 +149,141 @@ nav a:hover {
   .close-icon {
     display: none;
   }
+
+  /* OVERSKRIFT STYLE */
+  .tema2_knap {
+    background-color: #9a341f;
+    display: inline-block;
+    padding: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .tema2_knap h3 {
+    mix-blend-mode: soft-light;
+    cursor: default;
+  }
+
+  .tema_navn h1 {
+    font-size: 2.5rem;
+  }
+
+  .tema_oversigt {
+    margin-bottom: 100px;
+  }
+
+  .tema_oversigt img {
+    margin-bottom: 25px;
+  }
+
+  /* WIREFRAMES */
+
+  .wireframes_billeder {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 60%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin-bottom: 50px;
+  }
+
+  .wireframes img {
+    display: grid;
+    grid-template-rows: min-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .wireframes > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .wireframes h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* LAYOUTDIAGRAMMER */
+  .layoutdiagrammer_billeder {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 60%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin-bottom: 50px;
+  }
+
+  .layoutdiagrammer img {
+    display: grid;
+    grid-template-rows: min-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .layoutdiagrammer > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .layoutdiagrammer h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* FORKLARING */
+  .forskellige_sider_forklaring {
+    margin-bottom: 20px;
+  }
+  .forklaring_sider_billeder {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .forklaring_sider img {
+    display: grid;
+    grid-template-rows: min-content;
+    margin-top: 20px;
+  }
+
+  .forklaring_sider > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
+
+  .pile {
+    width: 20px;
+    filter: invert(100%);
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  /* KLIK VIDERE */
+  .klik_videre_link {
+    background-color: #9a341f;
+    display: inline-block;
+    padding: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 770px) {
+  /* WEBSITE NAVIGERING */
   .logo {
     text-align: left;
     margin-left: 200px;
@@ -146,4 +297,3 @@ nav a:hover {
     color: #9a341f;
   }
 }
-/* STYLING AF TING */
