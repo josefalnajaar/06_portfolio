@@ -86,19 +86,34 @@ nav a:hover {
 }
 
 /* OVERSKRIFT STYLE */
-.tema2_knap {
-  background-color: #9a341f;
+.tema_knap {
   display: inline-block;
   padding: 12px;
   padding-right: 18px;
   padding-left: 18px;
   margin-top: 50px;
   margin-bottom: 20px;
+  cursor: default;
 }
 
-.tema2_knap h3 {
+.tema_knap h3 {
   mix-blend-mode: soft-light;
-  cursor: default;
+}
+
+.tema_knap.tema2 {
+  background-color: #9a341f;
+}
+
+.tema_knap.tema3 {
+  background-color: #3956ca;
+}
+
+.tema_knap.tema4 {
+  background-color: #e8aa3e;
+}
+
+.tema_knap.tema5 {
+  background-color: #4b9136;
 }
 
 .tema_navn h1 {
@@ -454,21 +469,35 @@ nav a:hover {
     margin-bottom: 20px;
   }
 
-  .klik_videre_link {
-    background-color: #9a341f;
+  .klik_videre {
     display: inline-block;
-    padding: 12px;
-    padding-right: 18px;
-    padding-left: 18px;
+    padding: 12px 18px;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-
-  .klik_videre_link a {
     text-decoration: none;
   }
 
-  .klik_videre_link h2:hover {
-    color: #ed7158;
+  .klik_videre h2:hover {
+    mix-blend-mode: soft-light;
+  }
+
+  .klik_videre a {
+    text-decoration: none;
+  }
+
+  .klik_videre.tema2 {
+    background-color: #9a341f;
+  }
+
+  .klik_videre.tema3 {
+    background-color: #3956ca;
+  }
+
+  .klik_videre.tema4 {
+    background-color: #e8aa3e;
+  }
+
+  .klik_videre.tema5 {
+    background-color: #4b9136;
   }
 }
