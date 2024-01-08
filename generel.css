@@ -18,13 +18,17 @@
   src: url(Nohemi-Regular.woff2);
 }
 
+body {
+  background-color: #191919;
+}
+
 /* BURGERMENU */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #191919;
+  background-color: #0d0d0d;
   color: #fff;
 }
 
@@ -59,16 +63,20 @@ nav a {
   font-family: extrabold;
 }
 
+nav a:hover {
+  color: #9a341f;
+}
+
 .burger-icon,
 .close-icon {
   cursor: pointer;
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 770px) {
   .logo {
     order: 2;
-    text-align: center; /* Centrer tekst på mobilen */
+    text-align: center;
   }
 
   nav {
@@ -78,7 +86,7 @@ nav a {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #191919;
+    background-color: #0d0d0d;
     text-align: center;
   }
 
@@ -112,7 +120,7 @@ nav a {
 
   .burger-icon img,
   .close-icon img {
-    filter: invert(100%); /* Inverter farverne for at ændre sort til hvid */
+    filter: invert(100%);
   }
 
   .burger-icon {
@@ -124,10 +132,18 @@ nav a {
   }
 }
 
-/* Medieforespørgsel for desktop-versionen */
-@media screen and (min-width: 769px) {
+@media (min-width: 770px) {
   .logo {
     text-align: left;
+    margin-left: 200px;
+  }
+
+  nav {
+    margin-right: 200px;
+  }
+
+  nav a:hover {
+    color: #9a341f;
   }
 }
 /* STYLING AF TING */
