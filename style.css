@@ -23,3 +23,20 @@
   align-items: center;
   margin-bottom: 80px;
 }
+
+@media (min-width: 770px) {
+  /* TEMA OVERSIGT */
+  .tema_oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  /* FORSKELLIGE SIDER */
+
+  .forskellige_sider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}

@@ -85,6 +85,34 @@ nav a:hover {
   display: none;
 }
 
+/* OVERSKRIFT STYLE */
+.tema2_knap {
+  background-color: #9a341f;
+  display: inline-block;
+  padding: 12px;
+  padding-right: 18px;
+  padding-left: 18px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.tema2_knap h3 {
+  mix-blend-mode: soft-light;
+  cursor: default;
+}
+
+.tema_navn h1 {
+  font-size: 2.5rem;
+}
+
+.tema_oversigt {
+  margin-bottom: 100px;
+}
+
+.tema_oversigt img {
+  margin-bottom: 25px;
+}
+
 @media (max-width: 770px) {
   /* GENEREL MOBILE */
   main {
@@ -148,34 +176,6 @@ nav a:hover {
 
   .close-icon {
     display: none;
-  }
-
-  /* OVERSKRIFT STYLE */
-  .tema2_knap {
-    background-color: #9a341f;
-    display: inline-block;
-    padding: 12px;
-    padding-right: 18px;
-    padding-left: 18px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-
-  .tema2_knap h3 {
-    mix-blend-mode: soft-light;
-    cursor: default;
-  }
-
-  .tema_navn h1 {
-    font-size: 2.5rem;
-  }
-
-  .tema_oversigt {
-    margin-bottom: 100px;
-  }
-
-  .tema_oversigt img {
-    margin-bottom: 25px;
   }
 
   /* WIREFRAMES */
@@ -263,10 +263,21 @@ nav a:hover {
 
   .pile {
     width: 20px;
-    filter: invert(100%);
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     margin-bottom: 50px;
+    margin-top: 10px;
+  }
+
+  .pile p {
+    color: white;
+  }
+
+  .pile img {
+    filter: invert(100%);
+    margin: 0 5px;
   }
 
   /* KLIK VIDERE */
@@ -280,9 +291,21 @@ nav a:hover {
     margin-bottom: 20px;
     text-decoration: none;
   }
-}
+  .klik_videre_link a {
+    text-decoration: none;
+  }
 
+  .klik_videre_link h2:hover {
+    color: #ed7158;
+  }
+}
 @media (min-width: 770px) {
+  /* GENEREL STYLING */
+  main {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+
   /* WEBSITE NAVIGERING */
   .logo {
     text-align: left;
@@ -295,5 +318,157 @@ nav a:hover {
 
   nav a:hover {
     color: #9a341f;
+  }
+
+  /* OVERSKRIFT STYLE */
+  .tema_navn h1 {
+    font-size: 4rem;
+  }
+
+  .tema2_knap {
+    background-color: #9a341f;
+    display: inline-block;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .tema2_knap h3 {
+    mix-blend-mode: soft-light;
+    cursor: default;
+    font-size: 1.7rem;
+  }
+
+  .tema_navn h1 {
+    font-size: 3rem;
+  }
+  /* WIREFRAMES */
+
+  .wireframes_billeder {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin-bottom: 50px;
+  }
+
+  .wireframes img {
+    display: grid;
+    grid-template-rows: min-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .wireframes > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .wireframes h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* LAYOUTDIAGRAMMER */
+  .layoutdiagrammer_billeder {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin-bottom: 50px;
+  }
+
+  .layoutdiagrammer img {
+    display: grid;
+    grid-template-rows: min-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .layoutdiagrammer > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .layoutdiagrammer h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  /* FORKLARING */
+  .forskellige_sider_forklaring {
+    margin-bottom: 20px;
+  }
+  .forklaring_sider_billeder {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .forklaring_sider img {
+    display: grid;
+    grid-template-rows: min-content;
+  }
+
+  .forklaring_sider > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
+
+  .pile {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .pile p {
+    color: white;
+  }
+
+  .pile img {
+    filter: invert(100%);
+    margin: 0 5px;
+  }
+
+  .pile img,
+  p {
+    margin-top: 10px;
+  }
+
+  /* KLIK VIDERE */
+  .klik_videre h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .klik_videre_link {
+    background-color: #9a341f;
+    display: inline-block;
+    padding: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .klik_videre_link a {
+    text-decoration: none;
+  }
+
+  .klik_videre_link h2:hover {
+    color: #ed7158;
   }
 }
