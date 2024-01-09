@@ -41,6 +41,27 @@
   font-size: 3em;
 }
 
+/* OM MIG */
+
+.om_mig {
+  display: flex;
+  flex-direction: column;
+}
+
+.om_mig_intro,
+.om_mig_info {
+  gap: 20px;
+}
+
+.om_mig_introtekst,
+.om_mig_infotekst {
+  order: 1;
+}
+
+.om_mig_info {
+  margin-bottom: 100px;
+}
+
 @media (min-width: 770px) {
   /* FORSIDE */
   .forside {
@@ -113,5 +134,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* OM MIG */
+
+  .om_mig_intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .om_mig_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .om_mig_infotekst {
+    order: -1;
+  }
+
+  .info_galleri {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }

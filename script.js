@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function resetIconsOnResize() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 770) {
       burgerIcon.style.display = "none";
       closeIcon.style.display = "none";
     } else {

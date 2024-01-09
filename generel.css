@@ -30,8 +30,11 @@ p {
   font-family: regular;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
+  cursor: default;
 }
 
 /* GENEREL MENU */
@@ -130,14 +133,14 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-@media (max-width: 770px) {
-  /* GENEREL MOBILE */
-  main {
-    margin-right: 50px;
-    margin-left: 50px;
-  }
+/* GENEREL MOBILE */
+main {
+  margin-right: 50px;
+  margin-left: 50px;
+}
 
-  /* BURGERMENU */
+/* BURGERMENU */
+@media (max-width: 770px) {
   .logo {
     order: 2;
     text-align: center;
@@ -194,321 +197,393 @@ nav a:hover {
   .close-icon {
     display: none;
   }
+}
+/* FORSIDE MOBILE */
 
-  /* FORSIDE MOBILE */
+#kea {
+  max-width: 600px;
+  position: relative;
+}
 
-  #kea {
-    max-width: 600px;
-    position: relative;
-  }
+#kea:before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 75%;
+  z-index: -2;
+}
+#kea::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 75%;
+  z-index: -2;
+}
 
-  #kea:before {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    top: 75%;
-    z-index: -2;
-  }
-  #kea::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background-color: white;
-    position: absolute;
-    right: 0;
-    top: 75%;
-    z-index: -2;
-  }
+.forside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-  .forside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+.forside_tekst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
 
-  .forside_tekst {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-  }
+.forside_overskrift h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  cursor: default;
+}
 
-  .forside_overskrift h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
+.forside_underrubrik {
+  text-align: center;
+  display: flex;
+  gap: 110px;
+}
 
-  .forside_underrubrik {
-    text-align: center;
-    display: flex;
-    gap: 125px;
-  }
+.forside_underrubrik p {
+  background-color: #191919;
+  padding: 5px;
+  cursor: default;
+}
 
-  .forside_underrubrik p {
-    background-color: #191919;
-    padding: 5px;
-  }
+.forsidebokse_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .forsidebokse_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.forsidebokse {
+  width: 250px;
+  height: 100px;
+  margin: 15px;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
-  .forsidebokse {
-    width: 250px;
-    height: 100px;
-    margin: 15px;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
+.forsidebokse_links {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
-  .forsidebokse_links {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
+.forsidebokse_links h3 {
+  font-size: 2rem;
+  margin: 10px;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  bottom: 0;
+}
 
-  .forsidebokse_links h3 {
-    font-size: 1.5em;
-    margin: 10px;
-    mix-blend-mode: soft-light;
-  }
+.lidt_om_mig {
+  background-color: #9a341f;
+}
 
-  .lidt_om_mig {
-    background-color: #9a341f;
-  }
+.projekter_link {
+  background-color: #3956ca;
+}
 
-  .projekter_link {
-    background-color: #3956ca;
-  }
+.forsidebokse_links a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 
-  .forsidebokse_links a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
+/* OVERSKRIFT MOBILE */
 
-  /* OVERSKRIFT MOBILE */
+.tema_navn h1 {
+  text-align: center;
+}
 
-  .tema_navn h1 {
-    text-align: center;
-  }
+/* WIREFRAMES */
 
-  /* WIREFRAMES */
+.wireframes_billeder {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 60%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  margin-bottom: 50px;
+}
 
-  .wireframes_billeder {
-    display: grid;
-    gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 60%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    margin-bottom: 50px;
-  }
+.wireframes img {
+  display: grid;
+  grid-template-rows: min-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-  .wireframes img {
-    display: grid;
-    grid-template-rows: min-content;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.wireframes > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.wireframes h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
 
-  .wireframes > img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-  .wireframes h3 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
+/* LAYOUTDIAGRAMMER */
+.layoutdiagrammer_billeder {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 60%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  margin-bottom: 50px;
+}
 
-  /* LAYOUTDIAGRAMMER */
-  .layoutdiagrammer_billeder {
-    display: grid;
-    gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 60%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    margin-bottom: 50px;
-  }
+.layoutdiagrammer img {
+  display: grid;
+  grid-template-rows: min-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-  .layoutdiagrammer img {
-    display: grid;
-    grid-template-rows: min-content;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.layoutdiagrammer > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
 
-  .layoutdiagrammer > img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
+.layoutdiagrammer h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
 
-  .layoutdiagrammer h3 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
+/* FORKLARING */
+.forskellige_sider_forklaring {
+  margin-bottom: 20px;
+}
+.forklaring_sider_billeder {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
 
-  /* FORKLARING */
-  .forskellige_sider_forklaring {
-    margin-bottom: 20px;
-  }
-  .forklaring_sider_billeder {
-    display: grid;
-    gap: 10px;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-  }
+.forklaring_sider img {
+  display: grid;
+  grid-template-rows: min-content;
+  margin-top: 20px;
+}
 
-  .forklaring_sider img {
-    display: grid;
-    grid-template-rows: min-content;
-    margin-top: 20px;
-  }
+.forklaring_sider > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
 
-  .forklaring_sider > img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-  }
+.pile {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
 
-  .pile {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 10px;
-  }
+.pile p {
+  color: white;
+}
 
-  .pile p {
-    color: white;
-  }
+.pile img {
+  filter: invert(100%);
+  margin: 0 5px;
+}
 
-  .pile img {
-    filter: invert(100%);
-    margin: 0 5px;
-  }
+/* KLIK VIDERE */
+.klik_videre {
+  display: inline-block;
+  padding: 12px;
+  padding-right: 18px;
+  padding-left: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.klik_videre a {
+  text-decoration: none;
+}
 
-  /* KLIK VIDERE */
-  .klik_videre {
-    display: inline-block;
-    padding: 12px;
-    padding-right: 18px;
-    padding-left: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-decoration: none;
-  }
-  .klik_videre a {
-    text-decoration: none;
-  }
+.klik_videre h2:hover {
+  mix-blend-mode: soft-light;
+}
 
-  .klik_videre h2:hover {
-    mix-blend-mode: soft-light;
-  }
+.klik_videre.tema2 {
+  background-color: #9a341f;
+}
 
-  .klik_videre.tema2 {
-    background-color: #9a341f;
-  }
+.klik_videre.tema3 {
+  background-color: #3956ca;
+}
 
-  .klik_videre.tema3 {
-    background-color: #3956ca;
-  }
+.klik_videre.tema4 {
+  background-color: #e8aa3e;
+}
 
-  .klik_videre.tema4 {
-    background-color: #e8aa3e;
-  }
+.klik_videre.tema5 {
+  background-color: #4b9136;
+}
 
-  .klik_videre.tema5 {
-    background-color: #4b9136;
-  }
+/* PROJEKTER */
 
-  /* PROJEKTER */
+.boks {
+  width: 270px;
+  height: 100px;
+  margin: 15px;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
-  .boks {
-    width: 270px;
-    height: 100px;
-    margin: 15px;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
+.boks.tema2 {
+  background-color: #9a341f;
+}
+.boks.tema3 {
+  background-color: #3956ca;
+}
+.boks.tema4 {
+  background-color: #e8aa3e;
+}
+.boks.tema5 {
+  background-color: #4b9136;
+}
 
-  .boks.tema2 {
-    background-color: #9a341f;
-  }
-  .boks.tema3 {
-    background-color: #3956ca;
-  }
-  .boks.tema4 {
-    background-color: #e8aa3e;
-  }
-  .boks.tema5 {
-    background-color: #4b9136;
-  }
+.boks_navn {
+  position: absolute;
+  bottom: 0;
+  padding-left: 10px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
 
-  .boks_navn {
-    position: absolute;
-    bottom: 0;
-    padding-left: 10px;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-  }
+.projekt_nr {
+  margin-left: auto;
+  padding: 2px;
+}
 
-  .projekt_nr {
-    margin-left: auto;
-    padding: 2px;
-  }
+.projekt_nr h1 {
+  font-size: 4rem;
+}
 
-  .projekt_nr h1 {
-    font-size: 4rem;
-  }
+.grundlaeggende h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 
-  .grundlaeggende h3 {
-    font-size: 1rem;
-  }
+.boks_navn,
+.projekt_nr {
+  mix-blend-mode: soft-light;
+}
 
-  .boks_navn,
-  .projekt_nr {
-    mix-blend-mode: soft-light;
-  }
+.projekt_navn h1 {
+  font-size: 3rem;
+}
 
-  .projekt_navn h1 {
-    font-size: 3rem;
-  }
+.boks a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 
-  .boks a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
+/* OM MIG */
+
+.om_mig img {
+  width: 100%;
+}
+
+.om_mig_overskrift {
+  text-align: center;
+  margin: 30px;
+}
+
+.om_mig_overskrift h1 {
+  font-size: 3rem;
+}
+
+.om_mig_intro {
+  margin-bottom: 50px;
+}
+
+.om_mig_intro,
+.om_mig_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_galleri {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.info_galleri img {
+  display: grid;
+  grid-template-rows: min-content;
+  margin-top: 20px;
+}
+
+.info_galleri > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.pile_info {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.pile_info p {
+  color: white;
+}
+
+.pile_info img {
+  filter: invert(100%);
+  margin: 0 5px;
+}
+
+.pile_info img,
+p {
+  margin-top: 10px;
 }
 
 @media (min-width: 770px) {
@@ -568,6 +643,7 @@ nav a:hover {
   .forside_underrubrik {
     cursor: default;
     display: flex;
+    gap: 300px;
   }
 
   .forside_underrubrik p {
@@ -581,7 +657,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 120vh;
   }
 
   .forside_tekst {
@@ -590,16 +666,13 @@ nav a:hover {
     align-items: center;
   }
 
-  .forside_overskrift h1 {
-    font-size: 5.5em;
-  }
-
   .forside_underrubrik {
     text-align: center;
   }
 
   .forsidebokse_container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -622,11 +695,13 @@ nav a:hover {
   }
 
   .forsidebokse_links h3 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin: 10px;
     mix-blend-mode: soft-light;
     transition: opacity 0.3s;
     opacity: 0;
+    position: absolute;
+    bottom: 0;
   }
 
   .lidt_om_mig {
@@ -736,27 +811,8 @@ nav a:hover {
     object-fit: contain;
   }
 
-  .pile {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: 50px;
-  }
-
-  .pile p {
-    color: white;
-  }
-
-  .pile img {
-    filter: invert(100%);
-    margin: 0 5px;
-  }
-
-  .pile img,
-  p {
-    margin-top: 10px;
+  .pile_info {
+    display: none;
   }
 
   /* KLIK VIDERE */
@@ -835,6 +891,9 @@ nav a:hover {
     transition: opacity 0.3s;
   }
 
+  .projekt_navn h1 {
+    font-size: 2rem;
+  }
   .projekt_nr {
     margin-left: auto;
     padding: 2px;
@@ -846,7 +905,8 @@ nav a:hover {
   }
 
   .grundlaeggende h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
   }
 
   .boks_navn,
@@ -874,5 +934,26 @@ nav a:hover {
     top: 0;
     left: 0;
     z-index: 2;
+  }
+
+  /* OM MIG */
+
+  .om_mig_overskrift {
+    text-align: center;
+    margin: 50px;
+  }
+
+  .om_mig_overskrift h1 {
+    font-size: 3rem;
+  }
+  .om_mig img {
+    width: 100%;
+  }
+
+  .om_mig_intro p {
+    margin-right: 20px;
+  }
+  .om_mig_info p {
+    margin-left: 20px;
   }
 }
