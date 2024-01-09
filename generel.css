@@ -195,6 +195,113 @@ nav a:hover {
     display: none;
   }
 
+  /* FORSIDE MOBILE */
+
+  #kea {
+    max-width: 600px;
+    position: relative;
+  }
+
+  #kea:before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 75%;
+    z-index: -2;
+  }
+  #kea::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 75%;
+    z-index: -2;
+  }
+
+  .forside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .forside_tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .forside_overskrift h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+
+  .forside_underrubrik {
+    text-align: center;
+    display: flex;
+    gap: 125px;
+  }
+
+  .forside_underrubrik p {
+    background-color: #191919;
+    padding: 5px;
+  }
+
+  .forsidebokse_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forsidebokse {
+    width: 250px;
+    height: 100px;
+    margin: 15px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .forsidebokse_links {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .forsidebokse_links h3 {
+    font-size: 1.5em;
+    margin: 10px;
+    mix-blend-mode: soft-light;
+  }
+
+  .lidt_om_mig {
+    background-color: #9a341f;
+  }
+
+  .projekter_link {
+    background-color: #3956ca;
+  }
+
+  .forsidebokse_links a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
   /* OVERSKRIFT MOBILE */
 
   .tema_navn h1 {
@@ -403,6 +510,7 @@ nav a:hover {
     z-index: 2;
   }
 }
+
 @media (min-width: 770px) {
   /* GENEREL STYLING */
   main {
@@ -424,30 +532,129 @@ nav a:hover {
     color: #9a341f;
   }
 
-  /* OVERSKRIFT STYLE */
-  .tema_navn h1 {
-    font-size: 4rem;
+  /* FORSIDE */
+  #kea {
+    max-width: 600px;
+    position: relative;
   }
 
-  .tema2_knap {
-    background-color: #9a341f;
-    display: inline-block;
-    padding: 15px;
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  #kea:before {
+    content: "";
+    display: block;
+    width: 360px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 75%;
+    z-index: -2;
   }
-
-  .tema2_knap h3 {
-    mix-blend-mode: soft-light;
+  #kea::after {
+    content: "";
+    display: block;
+    width: 360px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 75%;
+    z-index: -2;
+  }
+  .forside_overskrift h1 {
+    font-size: 5.5rem;
     cursor: default;
-    font-size: 1.7rem;
   }
 
-  .tema_navn h1 {
-    font-size: 3rem;
+  .forside_underrubrik {
+    cursor: default;
+    display: flex;
   }
+
+  .forside_underrubrik p {
+    background-color: #191919;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .forside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .forside_tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forside_overskrift h1 {
+    font-size: 5.5em;
+  }
+
+  .forside_underrubrik {
+    text-align: center;
+  }
+
+  .forsidebokse_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .forsidebokse {
+    width: 300px;
+    height: 20px;
+    margin: 5px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+
+  .forsidebokse_links {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .forsidebokse_links h3 {
+    font-size: 1.5em;
+    margin: 10px;
+    mix-blend-mode: soft-light;
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+
+  .lidt_om_mig {
+    background-color: #9a341f;
+  }
+
+  .projekter_link {
+    background-color: #3956ca;
+  }
+
+  .forsidebokse_links a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .forsidebokse:hover {
+    height: 150px;
+    cursor: pointer;
+  }
+
+  .forsidebokse_links:hover h3 {
+    opacity: 1;
+  }
+
   /* WIREFRAMES */
 
   .wireframes_billeder {
