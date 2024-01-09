@@ -34,7 +34,6 @@ h1,
 h2,
 h3 {
   text-transform: uppercase;
-  cursor: default;
 }
 
 /* GENEREL MENU */
@@ -677,7 +676,7 @@ p {
   }
 
   .forsidebokse {
-    width: 300px;
+    width: 350px;
     height: 20px;
     margin: 5px;
     background-position: center;
@@ -853,11 +852,11 @@ p {
     background-color: #4b9136;
   }
 
-  /* PROJEKTER */
+  /* TEMAER */
 
   .boks {
-    width: 200px;
-    height: 15px;
+    width: 250px;
+    height: 16px;
     margin: 5px;
     background-position: center;
     position: relative;
@@ -905,7 +904,7 @@ p {
   }
 
   .grundlaeggende h3 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
   }
 
