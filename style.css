@@ -24,6 +24,23 @@
   margin-bottom: 80px;
 }
 
+/* PROJEKTER */
+.container_projekter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.projekter_overskrift {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.projekter_overskrift h1 {
+  font-size: 3em;
+}
+
 @media (min-width: 770px) {
   /* TEMA OVERSIGT */
   .tema_oversigt {
@@ -38,5 +55,30 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+  }
+
+  /* PROJEKTER */
+  .container_projekter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projekter_overskrift {
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  .projekter_overskrift h1 {
+    font-size: 5em;
+  }
+
+  .farve_boks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -61,6 +61,8 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
+  z-index: 10;
+  background-color: #191919;
 }
 
 nav li {
@@ -334,6 +336,72 @@ nav a:hover {
   .klik_videre.tema5 {
     background-color: #4b9136;
   }
+
+  /* PROJEKTER */
+
+  .boks {
+    width: 270px;
+    height: 100px;
+    margin: 15px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .boks.tema2 {
+    background-color: #9a341f;
+  }
+  .boks.tema3 {
+    background-color: #3956ca;
+  }
+  .boks.tema4 {
+    background-color: #e8aa3e;
+  }
+  .boks.tema5 {
+    background-color: #4b9136;
+  }
+
+  .boks_navn {
+    position: absolute;
+    bottom: 0;
+    padding-left: 10px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projekt_nr {
+    margin-left: auto;
+    padding: 2px;
+  }
+
+  .projekt_nr h1 {
+    font-size: 4rem;
+  }
+
+  .grundlaeggende h3 {
+    font-size: 1rem;
+  }
+
+  .boks_navn,
+  .projekt_nr {
+    mix-blend-mode: soft-light;
+  }
+
+  .projekt_navn h1 {
+    font-size: 3rem;
+  }
+
+  .boks a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
 }
 @media (min-width: 770px) {
   /* GENEREL STYLING */
@@ -520,5 +588,84 @@ nav a:hover {
 
   .klik_videre.tema5 {
     background-color: #4b9136;
+  }
+
+  /* PROJEKTER */
+
+  .boks {
+    width: 200px;
+    height: 15px;
+    margin: 5px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+
+  .boks.tema2 {
+    background-color: #9a341f;
+  }
+  .boks.tema3 {
+    background-color: #3956ca;
+  }
+  .boks.tema4 {
+    background-color: #e8aa3e;
+  }
+  .boks.tema5 {
+    background-color: #4b9136;
+  }
+
+  .boks_navn {
+    position: absolute;
+    bottom: 0;
+    padding-left: 10px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .projekt_nr {
+    margin-left: auto;
+    padding: 2px;
+  }
+
+  .projekt_nr h1 {
+    font-size: 1rem;
+    transition: ease 0.3s;
+  }
+
+  .grundlaeggende h3 {
+    font-size: 1rem;
+  }
+
+  .boks_navn,
+  .projekt_nr {
+    mix-blend-mode: soft-light;
+  }
+
+  .boks:hover {
+    height: 100px;
+    cursor: pointer;
+  }
+
+  .boks:hover .boks_navn {
+    opacity: 100%;
+  }
+
+  .boks:hover .projekt_nr h1 {
+    font-size: 5rem;
+  }
+
+  .boks a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
   }
 }
