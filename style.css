@@ -77,6 +77,15 @@
   flex-direction: column;
 }
 
+/* VIRKSOMHEDSSITE */
+
+.videosites {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
 @media (min-width: 770px) {
   /* FORSIDE */
   .forside {
@@ -203,5 +212,14 @@
   .aktivitetsdiagram_billeder img {
     width: 500px;
     object-fit: contain;
+  }
+
+  /* VIRKSOMHEDSSITE */
+
+  .videosites {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 50px;
   }
 }
