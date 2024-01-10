@@ -176,15 +176,6 @@
     order: -1;
   }
 
-  .info_galleri {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
   /* MOODBOARD OG STYLE TILE */
 
   .mood_og_style_container {

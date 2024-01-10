@@ -593,7 +593,10 @@ main {
 /* OM MIG */
 
 .om_mig img {
-  width: 100%;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .om_mig_overskrift {
@@ -609,10 +612,14 @@ main {
   margin-bottom: 50px;
 }
 
-.om_mig_intro,
-.om_mig_info {
+.om_mig_intro {
   display: flex;
   flex-direction: column;
+}
+
+.om_mig_introtekst p,
+.om_mig_introtekst h1 {
+  margin-bottom: 20px;
 }
 
 .info_galleri {
