@@ -133,7 +133,7 @@ nav a:hover {
 }
 
 .tema_oversigt {
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
 .tema_oversigt img {
@@ -398,6 +398,53 @@ main {
   font-size: 1.5rem;
 }
 
+/* PROCES OG PRÆSENTATION */
+
+.proces_og_praesentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  background-color: #0d0d0d;
+  padding: 100px;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+
+.procesdokumentation_knap a,
+.praesentation_knap a {
+  text-decoration: none;
+}
+
+.procesdokumentation_knap p,
+.praesentation_knap p {
+  color: #3956ca;
+}
+
+.procesdokumentation_knap:hover p,
+.praesentation_knap:hover p {
+  color: #8196ea;
+}
+
+/* MOODBOARD OG STYLE TILE */
+
+.mood_og_style_overskrift {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.moodboard_forklaring,
+.style_tile_forklaring {
+  margin-bottom: 50px;
+}
+
+.moodboard_forklaring img,
+.style_tile_forklaring img {
+  margin-bottom: 20px;
+}
+
 /* FORKLARING */
 .forskellige_sider_forklaring {
   margin-bottom: 20px;
@@ -611,6 +658,13 @@ main {
   margin-top: 10px;
 }
 
+/* AKTIVITETSDIAGRAM */
+
+.aktivitetsdiagram_titel {
+  text-align: center;
+  margin-top: 50px;
+}
+
 @media (min-width: 770px) {
   /* GENEREL STYLING */
   main {
@@ -766,8 +820,12 @@ main {
     margin-bottom: 50px;
   }
 
+  .html_billede {
+    text-align: center;
+  }
+
   .html_billede img {
-    width: 50px;
+    width: 500px !important;
     height: auto;
   }
   /* WIREFRAMES */
@@ -831,6 +889,37 @@ main {
     text-align: center;
     font-size: 1.5rem;
   }
+
+  /* PROCES OG PRÆSENTATION */
+
+  .proces_og_praesentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    background-color: #0d0d0d;
+    padding: 100px;
+    margin-bottom: 50px;
+    gap: 50px;
+  }
+
+  .procesdokumentation_knap a,
+  .praesentation_knap a {
+    text-decoration: none;
+  }
+
+  .procesdokumentation_knap p,
+  .praesentation_knap p {
+    color: #3956ca;
+  }
+
+  .procesdokumentation_knap:hover p,
+  .praesentation_knap:hover p {
+    color: #8196ea;
+  }
+
   /* FORKLARING */
 
   .tema p {
@@ -1010,5 +1099,39 @@ main {
   }
   .om_mig_info p {
     margin-left: 20px;
+  }
+
+  /* JAVASCRIPT */
+
+  .javascript_container_billeder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .javascript_container_billeder video {
+    width: 600px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .javascript_overskrift {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .javascript_kode_billede {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* AKTIVITETSDIAGRAM */
+
+  .aktivitetsdiagram_titel {
+    text-align: center;
+    margin-top: 50px;
   }
 }
