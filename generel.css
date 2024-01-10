@@ -90,6 +90,13 @@ nav a:hover {
 }
 
 /* OVERSKRIFT STYLE */
+
+.tema p,
+.tema h3 {
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
 .tema_knap {
   display: inline-block;
   padding: 12px;
@@ -102,6 +109,7 @@ nav a:hover {
 
 .tema_knap h3 {
   mix-blend-mode: soft-light;
+  margin: 0;
 }
 
 .tema_knap.tema2 {
@@ -291,6 +299,24 @@ main {
   bottom: 0;
 }
 
+/* HTML OG SEMANTIK */
+
+.html_overskrift h1 {
+  text-align: center;
+}
+
+.html_og_semantik {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.html_billede img {
+  width: 50px;
+  height: auto;
+}
+
 .lidt_om_mig {
   background-color: #9a341f;
 }
@@ -403,12 +429,12 @@ main {
   align-items: center;
   justify-content: center;
   margin: auto;
-  margin-bottom: 50px;
   margin-top: 10px;
 }
 
 .pile p {
   color: white;
+  margin: 0;
 }
 
 .pile img {
@@ -581,7 +607,7 @@ main {
 }
 
 .pile_info img,
-p {
+.pile_info p {
   margin-top: 10px;
 }
 
@@ -728,7 +754,22 @@ p {
   .forsidebokse_links:hover h3 {
     opacity: 1;
   }
+  /* HTML OG SEMANTIK */
+  .html_overskrift h1 {
+    text-align: center;
+  }
 
+  .html_og_semantik {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .html_billede img {
+    width: 50px;
+    height: auto;
+  }
   /* WIREFRAMES */
 
   .wireframes_billeder {
@@ -782,11 +823,21 @@ p {
     object-fit: cover;
   }
 
+  .layoutdiagrammer_titel {
+    margin-bottom: 20px;
+  }
+
   .layoutdiagrammer h3 {
     text-align: center;
     font-size: 1.5rem;
   }
   /* FORKLARING */
+
+  .tema p {
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
   .forskellige_sider_forklaring {
     margin-bottom: 20px;
   }
@@ -813,6 +864,10 @@ p {
 
   .pile_info {
     display: none;
+  }
+
+  .pile p {
+    margin: 0;
   }
 
   /* KLIK VIDERE */
